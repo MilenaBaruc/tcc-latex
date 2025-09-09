@@ -1,0 +1,25 @@
+{
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk-docker",
+      "command": "docker",
+      "args": [
+        "compose",
+        "run",
+        "--rm",
+        "latex",
+        "latexmk",
+        "-pdf",
+        "-interaction=nonstopmode",
+        "-synctex=1",
+        "tcc.tex"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk via Docker",
+      "tools": ["latexmk-docker"]
+    }
+  ]
+}
